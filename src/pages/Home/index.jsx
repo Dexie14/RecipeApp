@@ -5,8 +5,8 @@ import { useState,
 // import axios from "axios";
 import classes from "./Home.module.css";
 import SearchIngredient from '../../components/SearchIngredient/index'
-import SearchNutrient from "../../components/searchNutrient/searchNutrient";
-import RecipeSearch from "../../components/Searches/RecipeSearch";
+import SearchNutrient from "../../components/searchNutrient";
+import RecipeSearch from "../../components/Searches";
 // import { useNavigate } from "react-router-dom";
 // import {key} from "../../Constant/index";
 
