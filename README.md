@@ -18,13 +18,13 @@ Users should be able to:
 
 ### Screenshot
 
-<!-- ![](./src/assets//RecipeApp.png) -->
+![](./src/assets//RecipeApp.png)
 
 
 
 ### Links
 
-<!-- - Solution URL: [https://github.com/Dexie14/RecipeApp.git](https://github.com/Dexie14/RecipeApp.git) -->
+- Solution URL: [https://github.com/Dexie14/RecipeApp](https://github.com/Dexie14/RecipeApp)
 
 ## My process
 
