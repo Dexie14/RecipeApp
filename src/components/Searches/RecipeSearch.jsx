@@ -62,7 +62,7 @@ const RecipeSearch = () => {
             View more
           </button>
         </div>
-        ))}
+        )) }
       </div>
     </div>
   );

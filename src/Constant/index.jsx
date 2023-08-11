@@ -1,6 +1,6 @@
 
 
-export const key = "c03ff691e1f14821905a874c8a71f70a"
+export const key = "28929a28af9a422ba85187eb2f49f03d"
 
 export const NutrientList = [
     {
