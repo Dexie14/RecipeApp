@@ -4,6 +4,9 @@ import { useState,
    } from "react";
 // import axios from "axios";
 import classes from "./Home.module.css";
+import delicious from '../../assets/delicious.jpg'
+import chocolateCake from '../../assets/chocolate-cake.jpg'
+import tart from '../../assets/tartt.jpg'
 import SearchIngredient from '../../components/SearchIngredient/index'
 import SearchNutrient from "../../components/searchNutrient";
 import RecipeSearch from "../../components/Searches";
@@ -21,38 +24,38 @@ const Home = () => {
     {
       name: "Strawberry Pie",
       description: "A delicious and refreshing pie made with fresh strawberries.",
-      image: "https://img.freepik.com/free-photo/beautifully-decorted-bakery-sweets_23-2149367826.jpg?w=1060&t=st=1691588294~exp=1691588894~hmac=e74ffeab98833128241e669f39a0edcd4b332b439463aff206b7210ca89f02d7",
-      crossorigin: "anonymous",
+      image: tart,
+        crossorigin: "anonymous",
     },
     {
       name: "Chocolate Cake",
       description: "A rich and decadent chocolate cake that is perfect for any occasion.",
-      image: "https://img.freepik.com/free-photo/dessert-fruitcake_144627-10487.jpg?w=1060&t=st=1691588335~exp=1691588935~hmac=55e5bae598e9744da31e1711ed45f9a20b7f18219194155e4bddc91ad927f9de",
-      crossorigin: "anonymous",
+      image: chocolateCake,
+         crossorigin: "anonymous",
     },
     {
       name: "Ulu Vadai",
       description: "A traditional South Indian dessert made with lentils and coconut.",
-      image: "https://img.freepik.com/free-photo/meat-dish-with-vegetables_144627-18092.jpg?w=1060&t=st=1691588351~exp=1691588951~hmac=23d69c0e3d4e7384317e190b77ce4031b6c0fdd69f755995dc8ccb9c4887cd51",
+      image: delicious,
       crossorigin: "anonymous",
     },
     {
       name: "Strawberry Pie",
       description: "A delicious and refreshing pie made with fresh strawberries.",
-      image: "https://img.freepik.com/free-photo/beautifully-decorted-bakery-sweets_23-2149367826.jpg?w=1060&t=st=1691588294~exp=1691588894~hmac=e74ffeab98833128241e669f39a0edcd4b332b439463aff206b7210ca89f02d7",
-      crossorigin: "anonymous",
+      image: tart,
+        crossorigin: "anonymous",
     },
     {
       name: "Chocolate Cake",
       description: "A rich and decadent chocolate cake that is perfect for any occasion.",
-      image: "https://img.freepik.com/free-photo/dessert-fruitcake_144627-10487.jpg?w=1060&t=st=1691588335~exp=1691588935~hmac=55e5bae598e9744da31e1711ed45f9a20b7f18219194155e4bddc91ad927f9de",
-      crossorigin: "anonymous",
+      image: chocolateCake,
+       crossorigin: "anonymous",
     },
     {
       name: "Ulu Vadai",
       description: "A traditional South Indian dessert made with lentils and coconut.",
-      image: "https://img.freepik.com/free-photo/meat-dish-with-vegetables_144627-18092.jpg?w=1060&t=st=1691588351~exp=1691588951~hmac=23d69c0e3d4e7384317e190b77ce4031b6c0fdd69f755995dc8ccb9c4887cd51",
-      crossorigin: "anonymous",
+      image: delicious,
+       crossorigin: "anonymous",
     },
   ]
 
