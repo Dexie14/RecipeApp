@@ -1,0 +1,63 @@
+.App{
+    width: 95%;
+    margin: 15px auto;
+}
+.App h3{
+    margin-Top: 20px;
+}
+
+.get div{
+    background-color: white;
+    border: 1px solid whitesmoke;
+    width: 90%;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+.card{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px ;
+}
+.card div{
+    background-color: white;
+    border: 1px solid whitesmoke;
+    width: 33%;
+    padding: 10px;
+}
+.card img{
+    width: 100%;
+}
+
+.searchRecipes {
+    margin-bottom: 20px;
+  }
+  
+  .searchRecipes input {
+    padding: 8px;
+    font-size: 16px;
+    width: 200px;
+    margin: 0px 10px;
+  }
+  
+  .searchRecipes button , 
+  .search button{
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    margin: 2px;
+    border: none;
+    cursor: pointer;
+  }
+
+  @media (max-width: 765px){
+    .card{
+        flex-direction: column;
+    }
+    .card div{
+        width: 90%;
+        margin: 10px auto;
+    }
+}
