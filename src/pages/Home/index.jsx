@@ -4,7 +4,7 @@ import { useState,
    } from "react";
 // import axios from "axios";
 import classes from "./Home.module.css";
-import SearchIngredient from "../../components/SearchIngredient/SearchIngredient"
+import SearchIngredient from "../../components/SearchIngredient"
 import SearchNutrient from "../../components/searchNutrient/searchNutrient";
 import RecipeSearch from "../../components/Searches/RecipeSearch";
 // import { useNavigate } from "react-router-dom";

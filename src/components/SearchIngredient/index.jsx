@@ -1,25 +1,24 @@
-import  { useState } from 'react';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
-import classes from "../../pages/Home/Home"
-import {key} from "../../Constant/index"
+import { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import classes from "../../pages/Home";
+import { key } from "../../Constant/index";
 import { toast } from "react-toastify";
 
 function SearchIngredient() {
-
-    const navigate = useNavigate(); 
-  const [ingredientsInput, setIngredientsInput] = useState('');
-  const [numberInput, setNumberInput] = useState('');
+  const navigate = useNavigate();
+  const [ingredientsInput, setIngredientsInput] = useState("");
+  const [numberInput, setNumberInput] = useState("");
   const [searchResults, setSearchResults] = useState([]);
 
   const handleSearch = async (event) => {
     event.preventDefault();
 
-    const ingredients = ingredientsInput.split(',').map(item => item.trim());
+    const ingredients = ingredientsInput.split(",").map((item) => item.trim());
     const number = parseInt(numberInput);
 
     const queryParams = new URLSearchParams({
-      ingredients: ingredients.join(','),
+      ingredients: ingredients.join(","),
       number: number,
       apiKey: key,
     });
@@ -30,11 +29,11 @@ function SearchIngredient() {
       const response = await axios.get(apiUrl);
       const data = response.data;
       setSearchResults(data);
-      
+
       toast.success(response.data.message);
     } catch (error) {
-      console.error('Error fetching recipes:', error);
-      
+      console.error("Error fetching recipes:", error);
+
       toast.error(error.response.statusText);
     }
   };
@@ -45,7 +44,7 @@ function SearchIngredient() {
       <form onSubmit={handleSearch}>
         <label htmlFor="ingredients">Ingredients (comma-separated):</label>
         <input
-        style={{marginRight:"15px", marginLeft: "5px"}}
+          style={{ marginRight: "15px", marginLeft: "5px" }}
           type="text"
           id="ingredients"
           value={ingredientsInput}
@@ -55,8 +54,7 @@ function SearchIngredient() {
 
         <label htmlFor="number">Number of Results:</label>
         <input
-        
-        style={{marginRight:"15px", marginLeft: "5px"}}
+          style={{ marginRight: "15px", marginLeft: "5px" }}
           type="number"
           id="number"
           value={numberInput}
@@ -69,10 +67,24 @@ function SearchIngredient() {
 
       <div className={classes.card}>
         {searchResults.map((recipe) => (
-          <div key={recipe.id} style={{display: "flex", flexDirection: "column", width:"50%", margin: "20px auto"}}>
+          <div
+            key={recipe.id}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              width: "50%",
+              margin: "20px auto",
+            }}
+          >
             <h2>{recipe.title}</h2>
             <img src={recipe.image} />
-            <button onClick={() => {navigate(`/getRecipe/${recipe.id}`)}}>View more</button>
+            <button
+              onClick={() => {
+                navigate(`/getRecipe/${recipe.id}`);
+              }}
+            >
+              View more
+            </button>
           </div>
         ))}
       </div>

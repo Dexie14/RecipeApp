@@ -1,9 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import classes from "../../pages/Home/Home"
+import classes from "../../pages/Home";
 
-import {key} from "../../Constant/index"
+import { key } from "../../Constant/index";
 import { toast } from "react-toastify";
 
 const RecipeSearch = () => {
@@ -29,7 +29,7 @@ const RecipeSearch = () => {
       toast.success(response.data.message);
     } catch (error) {
       console.error("Error fetching recipes:", error);
-      
+
       toast.error(error.response.statusText);
     }
   };
@@ -51,18 +51,26 @@ const RecipeSearch = () => {
 
       <div className={classes.card}>
         {searchResults.map((item) => (
-          <div key={item.id} style={{display: "flex", flexDirection: "column", width:"50%", margin: "20px auto"}}>
-          <img src={item.image} alt={item.name} />
-          <h2>{item.title}</h2>
-          <button
-            onClick={() => {
-              navigate(`/getRecipe/${item.id}`);
+          <div
+            key={item.id}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              width: "50%",
+              margin: "20px auto",
             }}
           >
-            View more
-          </button>
-        </div>
-        )) }
+            <img src={item.image} alt={item.name} />
+            <h2>{item.title}</h2>
+            <button
+              onClick={() => {
+                navigate(`/getRecipe/${item.id}`);
+              }}
+            >
+              View more
+            </button>
+          </div>
+        ))}
       </div>
     </div>
   );
